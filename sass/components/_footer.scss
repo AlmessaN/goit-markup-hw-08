@@ -1,0 +1,116 @@
+.footer {
+    background: $footerColor;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+.footer__container {
+    display: flex;
+}
+.footer__list {
+    display: flex;
+    align-items: baseline;
+}
+.footer__item-card {
+    padding-right: 93px;
+}
+.footer__cart {
+    padding-right: 70px;
+}
+.main-nav__title-change {
+    @include font (Raleway, 700, 26px, 1.15, 0.03em);
+    color: $simpleColor;
+}
+.footer__adress {
+    @include font (Roboto, 400, 14px, 1.7, 0.03em);
+    width: 231px;
+    color: $simpleColor;
+    text-decoration: none;
+    font-style: normal;
+    margin-top: 20px;
+    margin-bottom: 9px;
+    flex-direction: column;
+}
+.footer__contacts {
+    margin-bottom: 9px;
+}
+.footer__contakts-maill {
+    @include font (Roboto, 400, 14px, 1.7, 0.03em);
+    width: 231px;
+    color: $infoColor;
+    text-decoration: none;
+    font-style: normal;
+}
+.footer__contakts-tell {
+    @include font (Roboto, 400, 14px, 1.7, 0.03em);
+    width: 231px;
+    color: $infoColor;
+    text-decoration: none;
+    font-style: normal;
+}
+.footer__title {
+    @include font (Roboto, 700, 14px, 0.8, 0.03em);
+    color: $simpleColor;
+}
+.footer__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.footer__social {
+    text-align: center;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+    width: 44px;
+    height: 44px;
+    border-radius: 50px/50px;
+    margin-right: 10px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+        background-color:$basicColor;
+    }
+}
+.footer__social-logo {
+    fill: $simpleColor;
+    width: 20px;
+    height: 20px;
+    margin: 12px auto;
+}
+.footer__block {
+    display: flex;
+    margin-top: 20px;
+}
+.footer__form {
+    display: flex;
+}
+.footer__form-block {
+    padding-left: 16px;
+    margin-right: 12px;
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    background: 50%;
+    border-radius: 4px;
+    color: $simpleColor;
+}
+.footer__button {
+    display: flex;
+    cursor: pointer;
+    @include font (Roboto, 700, 16px, 1.8, 0.06em);
+    width: 200px;
+    height: 50px;
+    background: $basicColor;
+    color: $simpleColor;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .15);
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+.footer__button-send {
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    fill: $simpleColor;
+}

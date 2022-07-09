@@ -1,0 +1,41 @@
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 94px;
+}
+.details__list {
+    display: flex;
+    justify-content: center;
+}
+.details__item {
+    width: 270px;
+    margin-right: 30px;
+}
+.details__block {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    background-color: $btn-Color;
+    height: 120px;
+    margin-bottom: 30px;
+    transition: 250ms cubic-bezier (0.4, 0, 0.2, 1);
+}
+.details__icon {
+    background-size: contain;
+    width: 70px;
+    height: 70px;
+}
+.details__title {
+    @include font (Roboto, 700, 14px, 0.8, 0.03em);
+    color: #212121;
+}
+.details__text {
+    @include font (Roboto, 400, 14px, 1.7, 0.03em);
+    color: $nameColor;
+    margin-top: 10px;
+}

@@ -1,0 +1,19 @@
+.imposter {
+    background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) ), url(../images/backgraund-image.jpg);
+    background-size: cover;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+.imposter__card {
+    margin: 0 auto;
+}
+.imposter__title {
+    @include font (Roboto, 900, 44px, 1.36, 0.06em);
+    color: $simpleColor;
+    text-align: center;
+}
