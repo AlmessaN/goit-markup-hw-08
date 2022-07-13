@@ -34,10 +34,16 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     @include font (Raleway, 700, 26px, 1.15, 0.03em);
     margin-right: 93px;
     color: $titleColor;
+    @media screen and (min-width: 480px) {
+        @include font (Raleway, 700, 24px, 1.16, 0.03em);
+    }
 }
 .main-nav__logo {
     @include font (Raleway, 700, 26px, 1.15, 0.03em);
     color: $basicColor;
+    @media screen and (min-width: 480px) {
+        @include font (Raleway, 700, 24px, 1.16, 0.03em);
+    }
 }
 .menu__list {
     display: flex;

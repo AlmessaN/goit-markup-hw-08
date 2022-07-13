@@ -1,7 +1,14 @@
-
-.about {
+.about__container {
     padding-top: 94px;
     padding-bottom: 94px;
+}
+@media screen and (max-width:767px) {
+    .about {
+    display: none;
+    }
+    .about__container {
+        display: none;
+        }
 }
 .about__title {
     @include font (Roboto, 700, 36px, 1.16, 0.03em);
