@@ -15,24 +15,6 @@ body {
   padding-right: 15px;
 }
 
-@media screen and (max-width: 480px) {
-  [class*="__container"] {
-    width: 480px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  [class*="__container"] {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1600px) {
-  [class*="__container"] {
-    width: 1600px;
-  }
-}
-
 ul {
   -webkit-padding-start: 0;
           padding-inline-start: 0;
@@ -429,20 +411,6 @@ textarea {
   margin-top: 10px;
 }
 
-.about__container {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-@media screen and (max-width: 767px) {
-  .about {
-    display: none;
-  }
-  .about__container {
-    display: none;
-  }
-}
-
 .about__title {
   font-family: Roboto;
   font-weight: 700;
@@ -492,6 +460,12 @@ textarea {
   font-size: 14px;
   line-height: 0.8;
   text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .about {
+    display: none;
+  }
 }
 
 .team {
