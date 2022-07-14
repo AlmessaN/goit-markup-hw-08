@@ -1,103 +1,104 @@
 .header {
-    display: flex;
-    align-items: center;
+  border-bottom: 1px solid #ececec;
+  position: relative;
+}
 
+.header__nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+
+  @media screen and (min-width: 768px) {
+    min-height: 80px;
+  }
 }
-.header__border {
-border-bottom: 1px solid $border-headerColor;
-}
-.header__container {
-    display: flex;
-    height: 80px;
-    flex-wrap: wrap;
-    align-content: center;
-}
-.main-nav {
-    display: flex;
-    
-}
-.current {
-    color: $basicColor;
-}
-.menu__link.current::after {
-display: block;
-position: absolute;
-background-color: $basicColor;
-height: 4px;
-width: 100%;
-margin-top: 28px;
-border-radius: 2px;
-content: "";
-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.main-nav__title {
-    @include font (Raleway, 700, 26px, 1.15, 0.03em);
+
+.header__logo {
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+  @media screen and (min-width: 1200px) {
     margin-right: 93px;
-    color: $titleColor;
-    @media screen and (min-width: 480px) {
-        @include font (Raleway, 700, 24px, 1.16, 0.03em);
-    }
+  }
 }
-.main-nav__logo {
-    @include font (Raleway, 700, 26px, 1.15, 0.03em);
-    color: $basicColor;
-    @media screen and (min-width: 480px) {
-        @include font (Raleway, 700, 24px, 1.16, 0.03em);
-    }
-}
-.menu__list {
+
+.menu-btn {
+  display: none;
+  @media screen and (max-width: 767.5px) {
+    z-index: 991;
     display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-}
-.menu__list :last-child {
-    margin-right: 0;
-}
-.menu__item {
-    display: flex;
-    margin-right: 50px;
-}
-.menu__link {
-    @include font (Roboto, 500, 14px, 1.14, 0.02em);
-    position: relative;
-    color: $titleColor;
-    &:hover, &:focus {
-        color: $basicColor;
-        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    transition: fill $transition-settings;
+
+    &:hover,
+    &:focus {
+      fill: $accent-color;
     }
+
+    & .icon-cross {
+      display: none;
+
+      &:hover .site-nav-list__link--current,
+      &:focus .site-nav-list__link--current {
+        color: $primary-text-color;
+      }
+    }
+
+    &.is-open .icon-cross {
+      display: block;
+    }
+
+    &.is-open .icon-menu {
+      display: none;
+    }
+  }
 }
-.main-nav__contacts {
-    display: flex;
+
+.mobile-menu-thumb {
+  display: flex;
+
+  @media screen and (max-width: 767.5px) {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: opacity $transition-settings, visibility $transition-settings;
+
+    &.is-open {
+      display: flex;
+      position: fixed;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: fill;
+      width: 100%;
+      height: 100vh;
+      overflow-y: scroll;
+      padding: 48px 40px;
+      margin-left: auto;
+      margin-right: auto;
+      z-index: 900;
+      flex-direction: column;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      background-color: $primary-background-color;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+    flex-grow: 1;
     align-items: center;
-    margin-left: auto;
-}
-.mail {
-    @include font (Roboto, 500, 14px, 1.14, 0.02em);
-    margin-right: 30px;
-    color: $nameColor;
-   &:hover, &:focus {
-        color:$basicColor;
-        fill:$basicColor;
-        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-}
-.mail-icon {
-    width: 16px;
-    height: 12px;
-    margin-right: 10px;
-}
-.tel {
-    @include font (Roboto, 500, 14px, 1.14, 0.02em);
-    margin-right: 30px;
-    color: $nameColor;
-    &:hover, &:focus {
-        color:$basicColor;
-        fill: $basicColor;
-        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-}
-.tel__icon {
-    width: 10px;
-    height: 16px;
-    margin-right: 10px;
+  }
 }
