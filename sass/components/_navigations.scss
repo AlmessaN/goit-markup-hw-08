@@ -27,9 +27,9 @@
 }
 
 .site-nav-list__link {
+  @include font (Roboto, 500, 14px, 1.14, 0.02);
   color: $primary-text-color;
   transition: $transition-settings;
-
   &:hover,
   &:focus {
     color: $accent-color;
