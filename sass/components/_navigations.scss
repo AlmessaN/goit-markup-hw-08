@@ -3,7 +3,7 @@
   display: flex;
 
   justify-content: space-between;
-
+  
   font-size: 40px;
   line-height: 1.18;
 
@@ -29,7 +29,7 @@
 .site-nav-list__link {
   color: $primary-text-color;
   transition: $transition-settings;
-
+  font-weight: 500;
   &:hover,
   &:focus {
     color: $accent-color;
